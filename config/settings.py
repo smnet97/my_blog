@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blogs',
     'works',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +69,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'my_blog',
-        'USERNAME': 'root',
+        'USER': 'root',
         'PASSWORD': 'Qwerty123$',
         'HOST': 'localhost',
         'PORT': '3306',
