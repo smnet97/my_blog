@@ -9,7 +9,8 @@
 	<link rel="Icon" type="image/png" href="{% static 'main/img/jt.png' %}">
     <title>John Technologies</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="{% static 'main/slick/slick/slick.css' %}">
+	<link rel="stylesheet" href="{% static 'main/slick/slick/slick-theme.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
 
@@ -20,7 +21,14 @@
 
     {% endblock %}
     {% include 'layouts/footer.html' %}
+
+    <script src="{% static 'vendor/bootstrap/js/jquery-3.6.0.min.js' %}"></script>
+	<script src="{% static 'main/slick/slick/slick.js' %}"></script>
     <script src="{% static 'main/js/main.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
+
+    {% block extra_js %}
+
+    {% endblock %}
 </body>
 </html>

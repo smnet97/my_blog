@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-7^&&9jiymz6lxy1$s$2u$l@x3x8jx7cvwxq6%#03oe$5p8sa08
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -140,3 +140,13 @@ CKEDITOR_CONFIGS = {
         # 'width': 300,
     },
 }
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'smnet9701@gmail.com'
+EMAIL_HOST_PASSWORD = 'Qwerty123$%'
+
+
+BOT_TOKEN = '5551331418:AAF1NHGv0RucaMpq2UvsGEbq_17EKlIcSvg'
+BOT_ADMIN_ID = 344531351

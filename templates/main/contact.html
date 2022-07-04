@@ -2,5 +2,104 @@
 {% load static %}
 
 {% block contant %}
+    <header>
+        <section class="h_contact" id="h_contact">
+            <div class="content">
+                <h1>contact informations</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Quos, iusto in reprehenderit vitae
+                    animi cumque quisquam nihil temporibus eligendi molestias aliquid dolor. <br> Mollitia, alias
+                    soluta.
+                </p>
+            </div>
+            <div class="h_container">
+                <div class="h_contact_info">
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="text">
+                            <h1>Phone number</h1>
+                            <a href="tel:+998330087078">+998 33 0087 087</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="text">
+                            <h1>Email Address</h1>
+                            <a href="mailto:jackodilov@gmail.com">jackodilov@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="text">
+                            <h1>Fax Address</h1>
+                            <p>+9999 9087 123</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="text">
+                            <h1>Location</h1>
+                            <p>123 Business Avenue, NYC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_form">
+                    <h2>Send Massage</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis provident delt epturi
+                        placeat deleniti natus!
+                    </p>
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="inputbox">
+                            <input type="text" name="name" required="required">
+                            <span>Your Name</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" name="phone" required="required">
+                            <span>Phone</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="email" name="email" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" name="subject" required="required">
+                            <span>Subject</span>
+                        </div>
+                        <div class="inputbox">
+                            <textarea required rows="5" name="message"></textarea>
+                            <span>Type your message...</span>
+                        </div>
+                        <div class="inputbox">
+                            <input type="submit" value="Send Message">
+                        </div>
+                        <!-- <button type="submit">Send message</button> -->
+                    </form>
+                </div>
+            </div>
+        </section>  <!-- end section 2-->
 
+        <section class="trusted">
+            <h1>TRUSTED BY</h1>
+            <div class="trusted_img">
+                <img src="{% static 'main/img/11.png' %}" alt="">
+                <img src="{% static 'main/img/22.png' %}" alt="">
+                <img src="{% static 'main/img/33.png' %}" alt="">
+                <img src="{% static 'main/img/44.png' %}" alt="">
+            </div>
+        </section> <!--trusted end-->
+
+        <section class="map">
+            <h1>Find Us on Google Maps</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, quasi.
+            </p>
+            <div class="container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4854.739479809165!2d69.20180203066552!3d41.352178770091406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8d4a0dce8309%3A0x43e0a115d4b09d1a!2sBobir%20Akilkhanov%20Tech%20Academy!5e0!3m2!1sru!2s!4v1655645544613!5m2!1sru!2s"
+                        width="70%" height="450" style="border:0;" allowfullscreen="false" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </section> <!--end map section-->
 {% endblock %}
